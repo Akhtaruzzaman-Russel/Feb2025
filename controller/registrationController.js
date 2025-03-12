@@ -14,10 +14,36 @@ const registrationController = (req,res)=>{
     //     return res.send("Password must be at least 8 characters long");
     // }
 
-    let pattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
+    // let pattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 
-             if(!pattern.test(password)){
-                return res.send("Invalid email");
+    let numeric = /(?=.*[0-9])/;
+    let lower = /(?=.*[a-z])/;
+    let capital = /(?=.*[A-Z])/;
+    let sym = /(?=.*\W)/;
+    let lengh = /.{8,16}/;
+
+            //  if(!pattern.test(password)){
+            //     return res.send("Need Capita Lower & Symbol & 8 charecter Lenght");
+
+            // }
+             if(!numeric.test(password)){
+                return res.send("Need need a number");
+
+            }
+             if(!lower.test(password)){
+                return res.send("Need a lowercase");
+
+            }
+             if(!capital.test(password)){
+                return res.send("Need a Capital");
+
+            }
+             if(!sym.test(password)){
+                return res.send("Need a Symbol");
+
+            }
+             if(!lengh.test(password)){
+                return res.send("password must be 8-16 characters long");
 
             }
 
