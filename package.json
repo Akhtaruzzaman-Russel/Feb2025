@@ -1,0 +1,25 @@
+{
+  "name": "bandendproject",
+  "version": "1.0.0",
+  "description": "another express js back-end project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "expess",
+    "js",
+    "back-end",
+    "project"
+  ],
+  "author": "Akhtaruzzaman Russel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "mongodb": "^6.13.1",
+    "mongoose": "^8.10.1",
+    "nodemon": "^3.1.9"
+  }
+}
